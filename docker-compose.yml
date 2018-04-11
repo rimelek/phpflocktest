@@ -1,0 +1,12 @@
+version: "3"
+
+volumes:
+  data:
+
+services:
+  php:
+    build: .
+    volumes:
+      - data:/app/data
+    environment:
+      TEST_LOCK: 0
